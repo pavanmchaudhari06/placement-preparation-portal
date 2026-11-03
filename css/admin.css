@@ -1,0 +1,177 @@
+/* ========================================================
+   Admin Console Stylesheet: admin.css
+   Theme: Enterprise Dark Slate & Emerald Green (#059669)
+   ======================================================== */
+
+:root {
+    --admin-primary: #059669;
+    --admin-primary-hover: #047857;
+    --admin-primary-light: #ecfdf5;
+    --admin-sidebar-bg: #111827;       /* Deep dark grey */
+    --admin-sidebar-text: #9ca3af;
+    --admin-sidebar-active: #059669;    /* Emerald green */
+    --admin-bg-light: #f3f4f6;
+    --admin-card-border: #e5e7eb;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--admin-bg-light);
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------- Layout & Sidebar ---------------- */
+.admin-dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--admin-sidebar-bg);
+    color: var(--admin-sidebar-text);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1f2937;
+}
+
+.admin-sidebar .admin-brand {
+    padding: 20px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-sidebar .admin-brand i {
+    color: #10b981;
+}
+
+.admin-sidebar .nav-links {
+    list-style: none;
+    padding: 15px 10px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.admin-sidebar .nav-item {
+    margin-bottom: 4px;
+}
+
+.admin-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: var(--admin-sidebar-text);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.admin-sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: var(--admin-sidebar-active);
+    color: #ffffff;
+}
+
+.admin-sidebar .user-info {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+    background-color: #0b0f19;
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.admin-top-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--admin-card-border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-content-body {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+/* ---------------- Cards & UI ---------------- */
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--admin-card-border);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.stat-icon.green { background-color: #ecfdf5; color: #059669; }
+.stat-icon.slate { background-color: #f1f5f9; color: #334155; }
+.stat-icon.yellow { background-color: #fef3c7; color: #d97706; }
+.stat-icon.purple { background-color: #f3e8ff; color: #7c3aed; }
+.stat-icon.red { background-color: #fee2e2; color: #dc2626; }
+
+.content-card {
+    background: #ffffff;
+    border: 1px solid var(--admin-card-border);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.content-card .card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--admin-card-border);
+    padding: 16px 20px;
+    font-weight: 600;
+}
+
+/* Admin Button Override for Green Primary */
+.btn-admin {
+    background-color: #059669;
+    color: #ffffff;
+    border: 1px solid #059669;
+}
+
+.btn-admin:hover {
+    background-color: #047857;
+    color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+    .admin-dashboard-wrapper {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+    }
+}
