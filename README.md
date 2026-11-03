@@ -1,10 +1,16 @@
-## Screenshots
+Screenshots
 
-### Homepage
-![Homepage](screenshots/homepage.png)
+Homepage
 
-### Student Dashboard
-![Student Dashboard](screenshots/student-dashboard.png)
 
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
+
+Student Login
+
+
+
+Student Dashboard
+
+
+
+Admin Dashboard
+
